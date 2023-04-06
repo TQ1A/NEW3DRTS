@@ -10,6 +10,7 @@ public class Maket : MonoBehaviour
     private void Update()
     {
         Move();
+        Rotate();
         LeftClick();
     }
 
@@ -31,9 +32,19 @@ public class Maket : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Debug.Log(gameObject.transform);
-            Instantiate(_obj, gameObject.transform.position, _obj.transform.rotation, GameObject.Find("Buildings").transform);
+            Instantiate(_obj, gameObject.transform.position, gameObject.transform.rotation, GameObject.Find("Buildings").transform);
             Destroy(gameObject);
+        }
+    }
+    void Rotate()
+    {
+        if (Input.GetKey(KeyCode.X))
+        {
+            gameObject.transform.Rotate(0,0.5f,0);
+        }
+        if (Input.GetKey(KeyCode.Z))
+        {
+            gameObject.transform.Rotate(0,-0.5f,0);
         }
     }
 }
