@@ -5,6 +5,7 @@ using UnityEngine;
 public class LookAt_lock : MonoBehaviour
 {
     public Transform _target;
+    public float _angle;
 
     private void Update()
     {
@@ -14,6 +15,6 @@ public class LookAt_lock : MonoBehaviour
 
     void Lock()
     {
-        _target.transform.position = new Vector3(transform.position.x, 0, transform.position.z+5f);
+        _target.transform.position = new Vector3(transform.position.x, 0, transform.position.z+_angle);
     }
 }
