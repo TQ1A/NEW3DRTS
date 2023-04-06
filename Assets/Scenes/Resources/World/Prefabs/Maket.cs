@@ -22,7 +22,7 @@ public class Maket : MonoBehaviour
         {
             if (hits[i].collider.tag == "Ground")
             {
-                gameObject.transform.position = hits[i].point;
+                gameObject.transform.position = hits[i].point + hits[i].normal * 0.5f;
             }
         }
     }
