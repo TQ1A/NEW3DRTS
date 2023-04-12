@@ -38,11 +38,11 @@ public class Maket : MonoBehaviour
     }
     void Rotate()
     {
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.Z))
         {
             gameObject.transform.Rotate(0,0.5f,0);
         }
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.X))
         {
             gameObject.transform.Rotate(0,-0.5f,0);
         }
